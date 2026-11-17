@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pruebas de estilos de aprendizaje e inteligencia emocional para estudiantes.">
+  <title>Estilos de aprendizaje e inteligencia emocional</title>
+  <style>
+    :root{--ink:#172b4d;--blue:#245696;--sky:#eaf2ff;--line:#d5dfed;--paper:#fff;--muted:#63738a;--green:#167a5b;--danger:#b83a44}*{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}.top{background:linear-gradient(125deg,#123766,#2869b2);color:#fff;padding:34px 20px 55px}.wrap{width:min(960px,calc(100% - 32px));margin:auto}.eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.78}.top h1{font-size:clamp(1.8rem,5vw,2.7rem);margin:7px 0}.top p{margin:0;max-width:650px;opacity:.9}.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 30px #193e6a12;padding:clamp(20px,4vw,38px);margin:-25px auto 36px}.student{display:grid;grid-template-columns:2fr 1.1fr 1fr .8fr 1fr;gap:14px;margin-bottom:16px}.field label{display:block;font-weight:700;font-size:.88rem;margin-bottom:6px}.field input,.field select{width:100%;border:1px solid #b8c8de;border-radius:9px;padding:11px 12px;font:inherit;color:var(--ink);background:#fff}.field select:disabled{background:#f1f4f8;color:#8a97a8}.student-help{margin:0 0 14px;color:var(--muted);font-size:.9rem}.data-controls{display:flex;justify-content:flex-end;margin-bottom:8px}.data-completed .student,.data-completed .student-help,.data-completed .data-controls{display:none}.welcome{background:var(--sky);border-left:4px solid #5195e7;padding:15px 16px;border-radius:0 10px 10px 0;margin:0 0 24px}.welcome strong{font-size:1.1rem}.welcome p{margin:5px 0 0}#assessment{display:none}#assessment.started{display:block}.test,.controls{display:none}.unlocked .test.active,.unlocked .controls{display:flex}.unlocked .test.active{display:block}.progress{display:flex;gap:8px;margin:0 0 20px}.progress span{flex:1;padding:9px 12px;border-radius:9px;background:#eef2f7;color:var(--muted);font-weight:700;font-size:.88rem;text-align:center}.progress span.active{background:var(--blue);color:#fff}.progress span.done{background:#e7f7ef;color:var(--green)}.test h2{font-size:1.45rem;margin:0 0 6px}.instructions{background:var(--sky);border-left:4px solid #5195e7;padding:12px 14px;border-radius:0 8px 8px 0;margin:0 0 22px}.count{font-size:.9rem;color:var(--muted);font-weight:700;margin:0 0 14px}.question{border:1px solid var(--line);border-radius:12px;padding:17px;margin:12px 0;background:#fff}.question.answered{border-color:#93c5b7;background:#fbfffd}.question.missing{border:2px solid var(--danger);background:#fff7f7}.qtitle{display:flex;gap:12px;font-weight:700}.number{color:var(--blue);font-size:1.06rem;min-width:26px}.options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:14px 0 0 38px}.option{position:relative;cursor:pointer}.option input{position:absolute;opacity:0}.option span{display:flex;align-items:center;justify-content:center;min-height:42px;text-align:center;border:1px solid #c5d1e1;border-radius:8px;background:#fff;padding:7px;color:#3a4c63;font-size:.92rem;font-weight:650}.option input:checked+span{background:#e8f1ff;border-color:#377cd3;color:#144b8e;box-shadow:inset 0 0 0 1px #377cd3}.option input:focus-visible+span{outline:3px solid #8cc2ff;outline-offset:2px}.long-options{grid-template-columns:1fr}.long-options span{justify-content:flex-start;text-align:left}.controls{justify-content:space-between;align-items:center;gap:12px;margin-top:26px;border-top:1px solid var(--line);padding-top:22px}.button{border:0;border-radius:9px;background:var(--blue);color:#fff;padding:12px 18px;font:700 1rem system-ui;cursor:pointer}.button:hover{filter:brightness(.93)}.button:disabled{opacity:.5;cursor:not-allowed}.button.secondary{background:#e9eff7;color:var(--ink)}.button.finish{background:var(--green)}.message{display:none;margin-top:18px;border-radius:10px;padding:14px;background:#e7f7ef;color:#0e654a;font-weight:650}.message.show{display:block}.message.error{background:#fdecee;color:var(--danger)}.footer{text-align:center;color:var(--muted);font-size:.88rem;padding:0 0 32px}.required{color:var(--danger)}
+    .admin-open{float:right;margin-top:-34px;background:transparent;border:1px solid #b8d3f4;color:#fff;padding:9px 12px;border-radius:8px;font:700 .85rem system-ui;cursor:pointer}.admin-panel{display:none}.admin-panel.show{display:block}.admin-view #quiz-card,.admin-view .footer{display:none}.admin-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}.admin-head h2{margin:0}.admin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}.stat{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fbfdff}.stat small{display:block;color:var(--muted);font-weight:700}.stat strong{font-size:1.75rem;color:var(--blue)}.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.filters select{border:1px solid #b8c8de;border-radius:9px;padding:10px 12px;font:inherit;background:#fff}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px}.admin-table{border-collapse:collapse;width:100%;font-size:.86rem;min-width:980px}.admin-table th,.admin-table td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}.admin-table th{background:#f1f6fd;white-space:nowrap}.admin-table td.answers{min-width:170px;line-height:1.6}.admin-table details summary{cursor:pointer;color:var(--blue);font-weight:700}.pill{display:inline-block;padding:2px 9px;border-radius:99px;background:var(--sky);color:var(--blue);font-weight:800}.modal{display:none;position:fixed;inset:0;background:#10294f99;z-index:10;place-items:center;padding:18px}.modal.show{display:grid}.modal-box{background:#fff;border-radius:15px;width:min(400px,100%);padding:26px;box-shadow:0 20px 50px #001b3f55}.modal-box h2{margin:0 0 5px}.modal-box p{color:var(--muted);margin:0 0 18px}.modal-box input{width:100%;border:1px solid #b8c8de;border-radius:9px;padding:12px;font:inherit;margin-bottom:12px}.modal-error{color:var(--danger)!important;font-weight:700;margin:-4px 0 12px!important;display:none}.modal-error.show{display:block}.modal-actions{display:flex;justify-content:flex-end;gap:9px}.thanks-icon{display:grid;place-items:center;width:56px;height:56px;margin:0 auto 15px;border-radius:50%;background:#e7f7ef;color:#167a5b;font-size:2rem;font-weight:900}.thanks-box{text-align:center}.thanks-box p{margin-bottom:22px}
+    @media(max-width:820px){.student{grid-template-columns:1fr 1fr}.student .field:first-child{grid-column:1/-1}.admin-grid{grid-template-columns:1fr 1fr}}@media(max-width:640px){.top{padding-top:28px}.student{grid-template-columns:1fr}.options{margin-left:0;grid-template-columns:1fr 1fr}.long-options{grid-template-columns:1fr}.qtitle{gap:8px}.controls{flex-wrap:wrap}.controls .button{flex:1}.card{margin-top:-20px;padding:20px 16px}.admin-open{float:none;margin:16px 0 0}.admin-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="top"><div class="wrap"><div class="eyebrow">Orientación educativa</div><button class="admin-open" id="admin-open" type="button">Modo administrador</button><h1>Estilos de aprendizaje e inteligencia emocional</h1><p>Completa las dos pruebas con calma. No hay respuestas correctas o incorrectas: marca la opción que más se parezca a ti.</p></div></header>
+
+  <main class="wrap card" id="quiz-card">
+    <section class="student" aria-label="Datos del estudiante">
+      <div class="field"><label for="name">Nombre y apellido completos <span class="required">*</span></label><input id="name" autocomplete="name" required placeholder="Ej. María López"></div>
+      <div class="field"><label for="level">Nivel <span class="required">*</span></label><select id="level" required><option value="">Selecciona</option><option>Primaria</option><option>Secundaria</option></select></div>
+      <div class="field"><label for="grade">Grado <span class="required">*</span></label><select id="grade" required disabled><option value="">Elige nivel</option></select></div>
+      <div class="field"><label for="section">Sección <span class="required">*</span></label><select id="section" required><option value="">Selecciona</option><option>A</option><option>B</option></select></div>
+      <div class="field"><label for="dni">DNI <span class="required">*</span></label><input id="dni" inputmode="numeric" autocomplete="off" required maxlength="8" placeholder="8 dígitos"></div>
+    </section>
+    <p class="student-help">Completa todos los datos para habilitar el siguiente paso.</p>
+    <div class="data-controls"><button class="button" id="data-next" type="button" disabled>Siguiente →</button></div>
+
+    <div id="assessment" aria-live="polite">
+      <section class="welcome"><strong>¡Bienvenido(a), <span id="welcome-name"></span>!</strong><p>Por favor, completa adecuadamente cada pregunta. Lee las instrucciones de cada prueba y marca solo una respuesta por pregunta.</p></section>
+      <div class="progress"><span data-step="vak">1 · Estilos de aprendizaje</span><span data-step="emocional">2 · Inteligencia emocional</span></div>
+
+      <section id="vak" class="test active"><h2>Prueba 1 · Estilos de aprendizaje (VAK)</h2><p class="instructions"><strong>Instrucciones:</strong> Marca la opción <strong>a), b) o c)</strong> que mejor describe lo que haces habitualmente. Elige solo una por pregunta.</p><p class="count" id="vak-count"></p><div id="vak-questions"></div></section>
+
+      <section id="emocional" class="test"><h2>Prueba 2 · Inteligencia emocional</h2><p class="instructions"><strong>Instrucciones:</strong> Lee cada oración y marca con qué frecuencia te ocurre, según la escala. Responde pensando en cómo eres en general.</p><p class="count" id="emocional-count"></p><div id="emocional-questions"></div></section>
+
+      <div class="controls"><button class="button secondary" id="previous" type="button">← Anterior</button><button class="button" id="next" type="button">Continuar →</button><button class="button finish" id="finish" type="button" hidden>Finalizar y guardar</button></div>
+    </div>
+    <div class="message" id="message" role="status"></div>
+  </main>
+  <footer class="footer">Tus respuestas se guardan al finalizar la prueba.</footer>
+
+  <div class="modal" id="admin-login" aria-hidden="true"><div class="modal-box"><h2>Modo administrador</h2><p>Ingresa la contraseña para ver el dashboard.</p><input id="admin-password" type="password" autocomplete="current-password" placeholder="Contraseña"><p class="modal-error" id="admin-error">Contraseña incorrecta.</p><div class="modal-actions"><button class="button secondary" id="admin-cancel" type="button">Cancelar</button><button class="button" id="admin-enter" type="button">Ingresar</button></div></div></div>
+  <div class="modal" id="thanks-modal" aria-hidden="true"><div class="modal-box thanks-box"><div class="thanks-icon">✓</div><h2>Gracias por tu apoyo</h2><p>Tu evaluación fue registrada correctamente.</p><button class="button" id="thanks-close" type="button">Finalizar</button></div></div>
+
+  <section class="wrap card admin-panel" id="admin-panel">
+    <div class="admin-head"><div><div class="eyebrow" style="color:#245696">Modo administrador</div><h2>Dashboard de respuestas</h2></div><button class="button secondary" id="admin-exit" type="button">Salir</button></div>
+    <div class="admin-grid"><article class="stat"><small>Respuestas registradas</small><strong id="admin-total">0</strong></article><article class="stat"><small>Estudiantes únicos</small><strong id="admin-students">0</strong></article><article class="stat"><small>Primaria</small><strong id="admin-prim">0</strong></article><article class="stat"><small>Secundaria</small><strong id="admin-sec">0</strong></article></div>
+    <div class="controls" style="display:flex"><div class="filters"><select id="f-level"><option value="">Todos los niveles</option><option>Primaria</option><option>Secundaria</option></select><select id="f-grade"><option value="">Todos los grados</option></select><select id="f-section"><option value="">Todas las secciones</option><option>A</option><option>B</option></select><button class="button secondary" id="admin-refresh" type="button">Actualizar</button></div><button class="button" id="admin-download" type="button">Descargar Excel</button></div>
+    <div class="table-wrap"><table class="admin-table"><thead><tr><th>Fecha</th><th>Estudiante</th><th>Nivel</th><th>Grado</th><th>Sección</th><th>DNI</th><th>Estilo (V·A·K)</th><th>IE (28–112)</th><th>Prueba 1</th><th>Prueba 2</th></tr></thead><tbody id="admin-rows"></tbody></table></div>
+  </section>
+
+  <script>
+    // ===== Supabase =====
+    const SUPABASE_URL='https://ikwnarajxvpochadnzyy.supabase.co';
+    const SUPABASE_KEY='sb_publishable_moOgvxhKqQ8DMVK1bUG70g_8jahreLA';
+    const TABLE='evaluacion_estilos_ie';
+    const sbHeaders={'apikey':SUPABASE_KEY,'Content-Type':'application/json'};
+
+    // ===== Preguntas =====
+    const vak=[
+      ['Cuando aprendo algo nuevo, prefiero que:','me lo muestren con imágenes, esquemas o un video.','me lo expliquen hablando y poder hacer preguntas.','practicarlo yo mismo, haciéndolo con mis manos.'],
+      ['Para recordar un número de teléfono tiendo a:','imaginar cómo se ve escrito.','repetirlo en voz alta varias veces.','marcarlo en el aire o anotarlo con el dedo.'],
+      ['Cuando estoy concentrado en una tarea:','me distraen el desorden y las cosas que veo.','me distraen los ruidos y las conversaciones.','me cuesta quedarme quieto por mucho rato.'],
+      ['Resuelvo un problema más fácilmente si:','lo dibujo o hago un esquema.','lo converso con alguien y lo pienso en voz alta.','voy probando y corrigiendo sobre la marcha.'],
+      ['Cuando leo, suelo:','formar imágenes de lo que leo en mi mente.','leer en voz alta o “escuchar” las palabras.','moverme, cambiar de postura o usar el dedo.'],
+      ['Para dar indicaciones a alguien, prefiero:','dibujarle un mapa o mostrarle el camino.','explicárselo con palabras.','acompañarlo o hacer el gesto del recorrido.'],
+      ['En mi tiempo libre disfruto más:','ver películas, fotos, dibujar o leer.','escuchar música, podcasts o conversar.','hacer deporte, bailar o construir cosas.'],
+      ['Cuando quiero relajarme:','veo imágenes, paisajes o algo agradable.','escucho música o sonidos tranquilos.','camino, me muevo o hago alguna actividad física.'],
+      ['Entiendo mejor las explicaciones del profesor cuando:','usa la pizarra, diapositivas o gráficos.','habla con claridad y da buenos ejemplos.','hacemos prácticas, experimentos o dinámicas.'],
+      ['Recuerdo mejor a las personas por:','su cara y su apariencia.','su nombre y su voz.','lo que hice o viví con ellas.'],
+      ['Cuando escribo, me ayuda:','ver cómo queda ordenado y presentado.','decir las frases en voz alta mientras escribo.','usar el teclado o mover la mano al escribir.'],
+      ['Si tengo que armar algo nuevo, prefiero:','ver las imágenes o el diagrama del instructivo.','que alguien me lea o me explique los pasos.','empezar a probar y armarlo yo mismo.'],
+      ['Lo que más me molesta en clase es:','que haya desorden o nada que mirar.','que haya ruido o que no se escuche bien.','tener que quedarme sentado sin moverme.'],
+      ['Cuando estoy contento o nervioso, lo noto en:','mi expresión y lo que muestro con la cara.','mi tono de voz y lo que digo.','mi cuerpo: gestos, movimiento, inquietud.'],
+      ['Para estudiar para un examen prefiero:','subrayar, usar colores y hacer mapas mentales.','repetir en voz alta o explicárselo a alguien.','hacer ejercicios, resúmenes y practicar.'],
+      ['Cuando alguien me habla mucho rato:','necesito ver algo que acompañe lo que dice.','lo sigo bien y disfruto escuchar.','me cuesta mantenerme quieto y atento.'],
+      ['Elijo una palabra que me describe:','observador(a).','conversador(a).','activo(a).'],
+      ['Aprendo un baile o un deporte nuevo:','mirando cómo lo hacen otros.','escuchando las indicaciones y el ritmo.','haciéndolo y repitiendo los movimientos.'],
+      ['Cuando recuerdo un paseo, lo primero que vuelve es:','las imágenes y los lugares.','las conversaciones, la música o los sonidos.','lo que hice y cómo me sentí físicamente.'],
+      ['Al usar algo nuevo (un aparato, una app):','miro las imágenes o el instructivo.','pregunto o pido que me expliquen.','empiezo a usarlo y aprendo probando.'],
+      ['Prefiero que un profesor:','use muchos recursos visuales.','explique y dialogue con la clase.','proponga actividades y trabajo práctico.'],
+      ['Cuando pienso, suelo:','ver imágenes en mi mente.','hablarme a mí mismo por dentro.','necesitar moverme para ordenar mis ideas.'],
+      ['Lo que mejor recuerdo de una clase es:','lo que vi (láminas, videos, la pizarra).','lo que escuché (la explicación, los ejemplos).','lo que hice (la práctica o actividad).'],
+      ['Me siento más cómodo cuando una tarea:','tiene apoyos visuales y está bien ordenada.','permite conversar y preguntar.','me deja moverme y hacer cosas con las manos.']
+    ];
+    const emocional=['Me resulta fácil darme cuenta de cómo me siento.','Me gusta cómo soy.','Puedo entender cómo se sienten las personas que me rodean.','Cuando me molesto, logro calmarme sin hacer daño a nadie.','Cuando algo no sale como esperaba, busco otra forma de resolverlo.','Sé explicar con palabras lo que estoy sintiendo.','Me llevo bien con mis compañeros y amigos.','Soy una persona alegre la mayor parte del tiempo.','Aunque esté nervioso, puedo controlarme en situaciones difíciles.','Me adapto con facilidad a los cambios o a las cosas nuevas.','Nunca me he equivocado en nada.','Reconozco cuando estoy triste, enojado o preocupado.','Me preocupo por los demás y trato de ayudarlos.','Pienso que las cosas me van a salir bien.','Cuando tengo un problema, pienso con calma antes de actuar.','Si algo me sale mal, lo intento de una manera diferente.','Entiendo por qué me siento de cierta manera.','Me doy cuenta cuando un amigo necesita apoyo.','Disfruto de las actividades que hago cada día.','Puedo esperar mi turno sin desesperarme.','Encuentro soluciones cuando se me presenta una dificultad.','Siempre digo la verdad, absolutamente en todo.','Sé qué me hace sentir bien y qué me hace sentir mal.','Respeto los sentimientos y opiniones de los demás.','Me siento contento con mi vida.','Manejo bien mis nervios antes de un examen o una exposición.','Acepto los cambios de planes sin molestarme demasiado.','Me resulta fácil hablar de mis emociones con alguien de confianza.','Me agrada trabajar y compartir en grupo.','En general, me siento tranquilo y de buen ánimo.'];
+    const IMPRESION=[11,22]; // ítems de impresión positiva (no suman al puntaje de IE)
+
+    const GRADES={Primaria:['Primero','Segundo','Tercero','Cuarto','Quinto','Sexto'],Secundaria:['Primero','Segundo','Tercero','Cuarto','Quinto']};
+    const configs={vak:{data:vak,labels:['a)','b)','c)'],texts:true},emocional:{data:emocional,labels:['1 · Rara vez o nunca','2 · Pocas veces','3 · Muchas veces','4 · Con mucha frecuencia o siempre']}};
+    const moduleOrder=['vak','emocional'];
+    const state={active:'vak'};
+    const DRAFT_KEY='estilos-ie-borrador',BACKUP_KEY='estilos-ie-pendientes';
+    const $=id=>document.getElementById(id);
+    const studentName=$('name'),studentLevel=$('level'),studentGrade=$('grade'),studentSection=$('section'),studentDni=$('dni'),dataNext=$('data-next'),quizCard=$('quiz-card'),assessment=$('assessment'),previous=$('previous'),next=$('next'),finish=$('finish'),message=$('message');
+    let dashboardRecords=[],adminKey='';
+
+    function xml(v){return String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
+    function render(id){const {data,labels,texts}=configs[id];const holder=$(id+'-questions');holder.innerHTML=data.map((item,i)=>{const q=texts?item[0]:item;const opts=texts?item.slice(1):labels;return `<article class="question"><div class="qtitle"><span class="number">${i+1}.</span><span>${q}</span></div><div class="options ${texts?'long-options':''}">${opts.map((t,n)=>`<label class="option"><input type="radio" name="${id}-${i+1}" value="${texts?'abc'[n]:n+1}"><span>${texts?`<strong>${labels[n]}</strong>&nbsp; ${t}`:t}</span></label>`).join('')}</div></article>`}).join('');holder.addEventListener('change',()=>{updateCount(id);saveDraft()})}
+    function answered(id){return document.querySelectorAll(`#${id}-questions input:checked`).length}
+    function updateCount(id){$(id+'-count').textContent=`Respondidas: ${answered(id)} de ${configs[id].data.length}`;document.querySelectorAll(`#${id}-questions .question`).forEach(q=>{const d=!!q.querySelector('input:checked');q.classList.toggle('answered',d);if(d)q.classList.remove('missing')})}
+    function updateSteps(){const ai=moduleOrder.indexOf(state.active);document.querySelectorAll('.progress span').forEach(s=>{const i=moduleOrder.indexOf(s.dataset.step);s.classList.toggle('active',i===ai);s.classList.toggle('done',i<ai)})}
+    function switchTo(id){state.active=id;document.querySelectorAll('.test').forEach(x=>x.classList.toggle('active',x.id===id));const pos=moduleOrder.indexOf(id);previous.hidden=pos===0;next.hidden=pos===moduleOrder.length-1;finish.hidden=pos!==moduleOrder.length-1;message.className='message';updateSteps();window.scrollTo({top:assessment.offsetTop-18,behavior:'smooth'})}
+
+    function fillGrades(keep){const list=GRADES[studentLevel.value];studentGrade.innerHTML=list?'<option value="">Selecciona</option>'+list.map(g=>`<option>${g}</option>`).join(''):'<option value="">Elige nivel</option>';studentGrade.disabled=!list;if(keep&&list&&list.includes(keep))studentGrade.value=keep}
+    function validStudent(){return studentName.value.trim().split(/\s+/).length>=2&&studentLevel.value&&studentGrade.value&&studentSection.value&&/^\d{8}$/.test(studentDni.value)}
+    function updateAccess(){const ready=validStudent();dataNext.disabled=!ready;assessment.classList.toggle('unlocked',ready);if(ready){$('welcome-name').textContent=studentName.value.trim();saveDraft()}}
+
+    function collectAnswers(){const a={};document.querySelectorAll('#assessment input[type=radio]:checked').forEach(x=>a[x.name]=x.value);return a}
+    function saveDraft(){try{localStorage.setItem(DRAFT_KEY,JSON.stringify({name:studentName.value,level:studentLevel.value,grade:studentGrade.value,section:studentSection.value,dni:studentDni.value,answers:collectAnswers()}))}catch(e){}}
+    function restore(){let d=null;try{d=JSON.parse(localStorage.getItem(DRAFT_KEY)||'null')}catch(e){}if(!d)return;studentName.value=d.name||'';studentLevel.value=d.level||'';fillGrades(d.grade);studentSection.value=d.section||'';studentDni.value=d.dni||'';Object.entries(d.answers||{}).forEach(([k,v])=>{const i=document.querySelector(`input[name="${k}"][value="${v}"]`);if(i)i.checked=true});moduleOrder.forEach(updateCount)}
+    function currentComplete(){return answered(state.active)===configs[state.active].data.length}
+    function showIncomplete(){const qs=[...document.querySelectorAll(`#${state.active}-questions .question`)];const miss=qs.map((q,i)=>q.querySelector('input:checked')?null:i+1).filter(Boolean);qs.forEach((q,i)=>q.classList.toggle('missing',miss.includes(i+1)));message.textContent=`Falta completar la pregunta${miss.length===1?'':'s'}: ${miss.join(', ')}.`;message.className='message show error';qs.find(q=>q.classList.contains('missing'))?.scrollIntoView({behavior:'smooth',block:'center'})}
+
+    // ===== Puntajes =====
+    function scores(answers){let v=0,a=0,k=0;vak.forEach((_,i)=>{const r=answers[`vak-${i+1}`];if(r==='a')v++;else if(r==='b')a++;else if(r==='c')k++});const max=Math.max(v,a,k);const names=[];if(v===max)names.push('Visual');if(a===max)names.push('Auditivo');if(k===max)names.push('Kinestésico');let ie=0,imp=0;emocional.forEach((_,i)=>{const n=Number(answers[`emocional-${i+1}`]||0);if(IMPRESION.includes(i+1))imp+=n;else ie+=n});return {vak_v:v,vak_a:a,vak_k:k,estilo:names.join(' / '),ie_total:ie,impresion_positiva:imp}}
+
+    function payload(){const answers=collectAnswers();return {full_name:studentName.value.trim(),level:studentLevel.value,grade:studentGrade.value,section:studentSection.value,dni:studentDni.value,answers,...scores(answers)}}
+    async function insertRow(row){const r=await fetch(`${SUPABASE_URL}/rest/v1/${TABLE}`,{method:'POST',headers:{...sbHeaders,'Prefer':'return=minimal'},body:JSON.stringify(row)});if(!r.ok)throw new Error(await r.text())}
+    function pending(){try{return JSON.parse(localStorage.getItem(BACKUP_KEY)||'[]')}catch(e){return []}}
+    async function flushPending(){const list=pending();if(!list.length)return;const left=[];for(const row of list){try{await insertRow(row)}catch(e){left.push(row)}}try{localStorage.setItem(BACKUP_KEY,JSON.stringify(left))}catch(e){}}
+
+    finish.onclick=async()=>{if(!validStudent())return;if(!currentComplete())return showIncomplete();finish.disabled=true;finish.textContent='Guardando…';const row=payload();try{await insertRow(row);try{localStorage.removeItem(DRAFT_KEY)}catch(e){}message.className='message';$('thanks-modal').classList.add('show')}catch(err){console.error(err);try{const p=pending();p.push(row);localStorage.setItem(BACKUP_KEY,JSON.stringify(p))}catch(e){}message.textContent='No se pudo guardar en este momento (revisa tu conexión a internet). Tus respuestas quedaron guardadas en este equipo; vuelve a presionar «Finalizar y guardar» para intentarlo otra vez.';message.className='message show error';finish.disabled=false;finish.textContent='Finalizar y guardar'}};
+    $('thanks-close').onclick=()=>{location.reload()};
+
+    // ===== Administrador =====
+    function selectedLabel(id,index,value){if(!value)return '';const c=configs[id];if(c.texts)return `${value}) ${c.data[index]['abc'.indexOf(value)+1]}`;return c.labels[Number(value)-1]}
+    function answerSummary(rec,id){return configs[id].data.map((_,i)=>`${i+1}: ${xml(selectedLabel(id,i,rec.answers?.[`${id}-${i+1}`]))}`).join('<br>')}
+    function filtered(){const l=$('f-level').value,g=$('f-grade').value,s=$('f-section').value;return dashboardRecords.filter(r=>(!l||r.level===l)&&(!g||r.grade===g)&&(!s||r.section===s))}
+    function fecha(r){return new Date(r.created_at).toLocaleString('es-PE')}
+    function paint(){const rows=filtered();$('admin-total').textContent=rows.length;$('admin-students').textContent=new Set(rows.map(r=>r.dni)).size;$('admin-prim').textContent=rows.filter(r=>r.level==='Primaria').length;$('admin-sec').textContent=rows.filter(r=>r.level==='Secundaria').length;$('admin-rows').innerHTML=rows.length?rows.map(r=>`<tr><td>${xml(fecha(r))}</td><td>${xml(r.full_name)}</td><td>${xml(r.level)}</td><td>${xml(r.grade)}</td><td>${xml(r.section)}</td><td>${xml(r.dni)}</td><td><span class="pill">${xml(r.estilo)}</span><br><small>${r.vak_v} · ${r.vak_a} · ${r.vak_k}</small></td><td><span class="pill">${r.ie_total}</span><br><small>Impresión +: ${r.impresion_positiva}/8</small></td><td class="answers"><details><summary>Ver respuestas</summary>${answerSummary(r,'vak')}</details></td><td class="answers"><details><summary>Ver respuestas</summary>${answerSummary(r,'emocional')}</details></td></tr>`).join(''):'<tr><td colspan="10">Aún no hay respuestas registradas.</td></tr>'}
+    async function fetchRecords(key){const r=await fetch(`${SUPABASE_URL}/rest/v1/rpc/ver_evaluacion_estilos_ie`,{method:'POST',headers:sbHeaders,body:JSON.stringify({clave:key})});if(!r.ok)throw new Error(await r.text());return r.json()}
+    function syncGradeFilter(){const l=$('f-level').value;const list=l?GRADES[l]:GRADES.Primaria;const cur=$('f-grade').value;$('f-grade').innerHTML='<option value="">Todos los grados</option>'+list.map(g=>`<option>${g}</option>`).join('');if(list.includes(cur))$('f-grade').value=cur}
+    function cell(v,num){return `<Cell><Data ss:Type="${num?'Number':'String'}">${xml(v)}</Data></Cell>`}
+    function downloadExcel(){const recs=filtered();const head=a=>`<Row>${a.map(x=>cell(x)).join('')}</Row>`;
+      let resumen=head(['N°','Fecha','Nombre completo','Nivel','Grado','Sección','DNI','Visual (a)','Auditivo (b)','Kinestésico (c)','Estilo predominante','IE total (28–112)','Impresión positiva (2–8)']);
+      recs.forEach((r,n)=>{resumen+=`<Row>${cell(n+1,1)}${cell(fecha(r))}${cell(r.full_name)}${cell(r.level)}${cell(r.grade)}${cell(r.section)}${cell(r.dni)}${cell(r.vak_v,1)}${cell(r.vak_a,1)}${cell(r.vak_k,1)}${cell(r.estilo)}${cell(r.ie_total,1)}${cell(r.impresion_positiva,1)}</Row>`});
+      let det=head(['N°','Fecha','Nombre completo','Nivel','Grado','Sección','DNI','Prueba','Pregunta','Enunciado','Respuesta']);
+      recs.forEach((r,n)=>moduleOrder.forEach(id=>configs[id].data.forEach((item,i)=>{const q=configs[id].texts?item[0]:item;det+=`<Row>${cell(n+1,1)}${cell(fecha(r))}${cell(r.full_name)}${cell(r.level)}${cell(r.grade)}${cell(r.section)}${cell(r.dni)}${cell(id==='vak'?'Prueba 1 · Estilos':'Prueba 2 · Inteligencia emocional')}${cell(i+1,1)}${cell(q)}${cell(selectedLabel(id,i,r.answers?.[`${id}-${i+1}`]))}</Row>`})));
+      const wb=`<?xml version="1.0"?><Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"><Worksheet ss:Name="Resumen"><Table>${resumen}</Table></Worksheet><Worksheet ss:Name="Respuestas"><Table>${det}</Table></Worksheet></Workbook>`;
+      const url=URL.createObjectURL(new Blob([wb],{type:'application/vnd.ms-excel'})),a=document.createElement('a');a.href=url;a.download='estilos-inteligencia-emocional.xls';a.click();URL.revokeObjectURL(url)}
+
+    $('admin-open').onclick=()=>{$('admin-login').classList.add('show');$('admin-password').value='';$('admin-error').classList.remove('show');$('admin-password').focus()};
+    $('admin-cancel').onclick=()=>$('admin-login').classList.remove('show');
+    $('admin-password').addEventListener('keydown',e=>{if(e.key==='Enter')$('admin-enter').click()});
+    $('admin-enter').onclick=async()=>{const key=$('admin-password').value;const btn=$('admin-enter');btn.disabled=true;try{dashboardRecords=await fetchRecords(key);adminKey=key;$('admin-login').classList.remove('show');syncGradeFilter();paint();document.body.classList.add('admin-view');$('admin-panel').classList.add('show')}catch(e){console.error(e);$('admin-error').textContent=/clave/i.test(e.message)?'Contraseña incorrecta.':'No se pudo conectar con la base de datos.';$('admin-error').classList.add('show')}finally{btn.disabled=false}};
+    $('admin-refresh').onclick=async()=>{dashboardRecords=await fetchRecords(adminKey);paint()};
+    $('admin-exit').onclick=()=>{document.body.classList.remove('admin-view');$('admin-panel').classList.remove('show');dashboardRecords=[];adminKey=''};
+    $('admin-download').onclick=downloadExcel;
+    $('f-level').onchange=()=>{syncGradeFilter();paint()};$('f-grade').onchange=paint;$('f-section').onchange=paint;
+
+    // ===== Inicio =====
+    moduleOrder.forEach(render);moduleOrder.forEach(updateCount);restore();updateAccess();
+    studentLevel.addEventListener('change',()=>{fillGrades(studentGrade.value);updateAccess()});
+    studentDni.addEventListener('input',()=>{studentDni.value=studentDni.value.replace(/\D/g,'').slice(0,8)});
+    [studentName,studentGrade,studentSection,studentDni].forEach(x=>{x.addEventListener('input',updateAccess);x.addEventListener('change',updateAccess)});
+    dataNext.onclick=()=>{if(!validStudent())return;quizCard.classList.add('data-completed');assessment.classList.add('started');switchTo('vak')};
+    previous.onclick=()=>switchTo(moduleOrder[moduleOrder.indexOf(state.active)-1]);
+    next.onclick=()=>{if(!currentComplete())return showIncomplete();switchTo(moduleOrder[moduleOrder.indexOf(state.active)+1])};
+    flushPending();
+  </script>
+</body>
+</html>
